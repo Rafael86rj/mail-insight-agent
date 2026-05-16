@@ -1,0 +1,28 @@
+# Ambiente virtual
+
+venv/
+
+# Variáveis de ambiente
+
+.env
+
+# Logs
+
+logs/
+
+# Downloads temporários
+
+downloads/
+
+# Outputs
+
+output/
+
+# Cache Python
+
+**pycache**/
+*.pyc
+
+# Jupyter
+
+.ipynb_checkpoints/
