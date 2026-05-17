@@ -2,26 +2,30 @@
 
 Agente autônomo em Python com IA local capaz de:
 
-* Monitorar e-mails automaticamente
+* Ler e-mails automaticamente
 * Baixar anexos CSV/XLSX
 * Processar datasets com Pandas
 * Gerar insights utilizando LLM local via Ollama
-* Responder automaticamente o remetente com análises estruturadas em HTML
+* Responder automaticamente o remetente com relatório HTML
 * Registrar logs e histórico das análises
 
 ---
 
 # 🚀 Visão Geral
 
-O projeto foi desenvolvido com foco em aprendizado prático de:
+O objetivo do projeto foi construir um pipeline completo de automação analítica utilizando Python + IA local.
 
-* Arquitetura modular em Python
-* Integração com IA local (Ollama)
-* Automação de e-mails (IMAP/SMTP)
-* Processamento de dados com Pandas
-* Logs e rastreabilidade
-* Persistência histórica
-* Engenharia de Prompt para LLMs locais
+O agente monitora e-mails recebidos, identifica anexos de dados, executa análises estruturais do DataFrame e utiliza modelos LLM executados localmente via Ollama para gerar insights automáticos.
+
+O foco principal do projeto foi aprendizado prático de:
+
+* arquitetura modular
+* automação
+* integração com IA local
+* engenharia de prompts
+* logs
+* persistência histórica
+* versionamento Git/GitHub
 
 ---
 
@@ -29,8 +33,6 @@ O projeto foi desenvolvido com foco em aprendizado prático de:
 
 ```text
 E-mail recebido
-        ↓
-Leitura da caixa de entrada
         ↓
 Download do anexo
         ↓
@@ -40,19 +42,39 @@ Diagnóstico do DataFrame
         ↓
 Geração de insights com IA local
         ↓
-Criação de relatório HTML
+Criação do relatório HTML
         ↓
 Resposta automática por e-mail
         ↓
-Registro de logs e histórico
+Persistência em histórico CSV
 ```
+
+---
+
+# 🖼️ Demonstração
+
+## 📥 Entrada do E-mail
+
+![Entrada Email](images/entrada-email.png)
+
+---
+
+## 📧 Resposta Automática Gerada
+
+![Saída Email](images/saida-email.png)
+
+---
+
+## 💻 Repositório GitHub
+
+![GitHub](images/github.png)
 
 ---
 
 # 🏗️ Estrutura do Projeto
 
 ```text
-Mail Insight Agent/
+mail-insight-agent/
 │
 ├── src/
 │   ├── __init__.py
@@ -71,8 +93,9 @@ Mail Insight Agent/
 │
 ├── main.py
 ├── requirements.txt
-├── .env
-└── README.md
+├── .gitignore
+├── README.md
+└── .env
 ```
 
 ---
@@ -91,19 +114,26 @@ Mail Insight Agent/
 
 ---
 
-# 🤖 Modelo Utilizado
+# 🤖 IA Local
 
-O projeto utiliza modelos locais via Ollama.
+O projeto utiliza modelos executados localmente via Ollama.
 
-Exemplo:
+Exemplo utilizado:
 
 ```bash
 qwen2.5:3b
 ```
 
+Também foram realizados testes com:
+
+* llama3.2
+* gemma2
+* phi3
+* qwen3
+
 ---
 
-# 📧 Funcionalidades
+# 📊 Funcionalidades
 
 ## ✔ Leitura automática de e-mails
 
@@ -117,7 +147,7 @@ Analisar Dados
 
 ## ✔ Download automático de anexos
 
-Suporta:
+Suporte para:
 
 * `.csv`
 * `.xlsx`
@@ -126,37 +156,37 @@ Suporta:
 
 ## ✔ Diagnóstico automático do DataFrame
 
-Extrai:
+Extrai informações como:
 
 * linhas
 * colunas
 * tipos
-* nulos
+* valores nulos
 * duplicados
 * amostra dos dados
 
 ---
 
-## ✔ Geração de insights com IA local
+## ✔ Insights gerados por IA local
 
-A IA gera:
+A IA produz:
 
 * resumo executivo
-* oportunidades
-* problemas encontrados
+* insights principais
+* possíveis problemas
 * recomendações práticas
 
 ---
 
 ## ✔ Resposta automática em HTML
 
-O remetente recebe um relatório estruturado por e-mail.
+O remetente recebe um relatório visual estruturado automaticamente.
 
 ---
 
-## ✔ Sistema de Logs
+## ✔ Logs
 
-Os logs ficam armazenados em:
+Logs de execução armazenados em:
 
 ```text
 logs/
@@ -166,7 +196,7 @@ logs/
 
 ## ✔ Histórico das análises
 
-As análises ficam registradas em:
+Persistência automática em:
 
 ```text
 output/historico_analises.csv
@@ -197,7 +227,7 @@ OLLAMA_MODEL=qwen2.5:3b
 ## 1. Clonar repositório
 
 ```bash
-git clone https://github.com/seuusuario/mail-insight-agent.git
+git clone https://github.com/Rafael86rj/mail-insight-agent.git
 ```
 
 ---
@@ -230,7 +260,7 @@ pip install -r requirements.txt
 
 ## 5. Instalar Ollama
 
-https://ollama.com/
+[https://ollama.com/](https://ollama.com/)
 
 ---
 
@@ -242,7 +272,7 @@ ollama pull qwen2.5:3b
 
 ---
 
-## 7. Executar projeto
+## 7. Executar aplicação
 
 ```bash
 python main.py
@@ -250,19 +280,19 @@ python main.py
 
 ---
 
-# 📌 Aprendizados do Projeto
+# 📚 Principais Aprendizados
 
 Durante o desenvolvimento foram praticados conceitos como:
 
-* modularização
-* automação de processos
-* integração com IA local
-* manipulação de arquivos
-* tratamento de erros
-* logs
-* persistência de dados
-* engenharia de prompts
-* arquitetura de aplicações Python
+* Modularização de aplicações Python
+* Integração com IA local via Ollama
+* Engenharia de prompts para LLMs locais
+* Automação de e-mails com IMAP/SMTP
+* Tratamento de erros
+* Logs e rastreabilidade
+* Persistência histórica
+* Variáveis de ambiente (.env)
+* Versionamento com Git/GitHub
 
 ---
 
@@ -270,10 +300,10 @@ Durante o desenvolvimento foram praticados conceitos como:
 
 * Dashboard Streamlit
 * Agendamento automático
-* Múltiplos modelos de IA
-* Classificação automática de datasets
+* Multi-modelos LLM
 * Banco de dados
 * API REST
+* Classificação automática de datasets
 * Deploy em servidor
 
 ---
@@ -282,4 +312,4 @@ Durante o desenvolvimento foram praticados conceitos como:
 
 Rafael Fernandes dos Santos
 
-Projeto desenvolvido para aprendizado prático de automação, análise de dados e IA local com Python.
+Projeto desenvolvido para aprendizado prático de automação, análise de dados e IA local utilizando Python.
