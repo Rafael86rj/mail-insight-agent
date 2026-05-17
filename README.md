@@ -55,19 +55,19 @@ Persistência em histórico CSV
 
 ## 📥 Entrada do E-mail
 
-![Entrada Email](images/entrada-email.png)
+![Entrada Email](Imagens/entrada-email.png)
 
 ---
 
 ## 📧 Resposta Automática Gerada
 
-![Saída Email](images/saida-email.png)
+![Saída Email](Imagens/saida-email.png)
 
 ---
 
 ## 💻 Repositório GitHub
 
-![GitHub](images/github.png)
+![GitHub](Imagens/github.png)
 
 ---
 
