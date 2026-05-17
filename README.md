@@ -61,7 +61,7 @@ Persistência em histórico CSV
 
 ## 📧 Resposta Automática Gerada
 
-![Saída Email](Imagens/Saída_de_Emaill.png)
+![Saída Email](Imagens/Saída_de_Email.png)
 
 ---
 
